@@ -1,0 +1,5 @@
+
+
+django==2.1.7
+djangorestframework==3.9.1
+Pygments==2.3.1

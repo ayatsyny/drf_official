@@ -1,0 +1,67 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+
+GET http://127.0.0.1:8000/users/
+Authorization: Basic admin admin123456789
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/snippets/
+Accept: application/json
+
+###
+
+
+###
+
+GET http://127.0.0.1:8000/snippets/
+Accept: text/html
+
+###
+
+
+###
+
+GET http://127.0.0.1:8000/snippets/snippets.json
+Accept:  application/json
+
+###
+
+
+POST http://127.0.0.1:8000/snippets/
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="field-name"
+
+{
+  "id": 3,
+  "title": "",
+  "code": "print 123",
+  "linenos": false,
+  "language": "python",
+  "style": "friendly"
+}
+--WebAppBoundary--
+
+###
+
+POST http://127.0.0.1:8000/snippets/
+Content-Type: application/json;
+
+{
+  "id": 55,
+  "title": "",
+  "code": "print 123",
+  "linenos": false,
+  "language": "python",
+  "style": "friendly"
+}
+
+###
